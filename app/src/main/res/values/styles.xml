@@ -1,0 +1,134 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="windowActionModeOverlay">true</item>
+
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="title_text">
+            <item name="android:textColor">@color/colorBlack</item>
+            <item name="android:textSize">30sp</item>
+
+    </style>
+    <style name="TextToolbarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <!-- <item name="android:fontFamily">sans-serif</item>-->
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="TextField">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+    </style>
+    <style name="TextField.Hint">
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="android:textColor">@color/colorHint</item>
+        <item name="android:textSize">@dimen/small_size</item>
+    </style>
+    <style name="forgotpassword" >
+        <item name="android:textColor">@color/colorForgotPassword</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextField.Hint.login">
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="android:textColor">@color/colorHint</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+    </style>
+
+    <style name="login_button" >
+            <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:minWidth">200dp</item>
+            <item name="cornerRadius">10dp</item>
+    </style>
+    <style name="InputTextAppearance" parent="Widget.Design.TextInputLayout">
+        <!-- reference our hint & error styles -->
+        <item name="colorControlNormal">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="colorControlActivated">@color/colorWhite</item>
+        <item name="colorControlHighlight">@color/colorWhite</item>
+
+    </style>
+
+    <style name="HintInputText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/small_size</item>
+        <item name="android:textColor">@color/colorWhite</item>
+
+
+    </style>
+
+    <style name="ErrorInputText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/small_size</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="TextField.White">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+    </style>
+    <style name="AppTheme.EditText">
+        <item name="colorControlNormal">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="colorControlActivated">@color/colorWhite</item>
+        <item name="colorControlHighlight">@color/colorWhite</item>
+    </style>
+
+    <style name="WhiteButton" parent="@style/Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:textSize">@dimen/text_submit</item>
+
+
+        <!--<item name="android:textSize">16sp</item>-->
+
+        <item name="android:elevation">4dp</item>
+        <item name="android:minWidth">200dp</item>
+        <item name="cornerRadius">24dp</item>
+    </style>
+
+    <style name="TaskDetailsText">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorTexxt</item>
+    </style>
+
+    <style name="button_design_task">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="TaskDataText">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/task_data_color</item>
+    </style>
+
+    <style name="search_text">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TitleBar">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/title_bar_bg</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/large_size</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+</resources>

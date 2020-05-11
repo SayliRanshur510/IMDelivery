@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="item"
+            type="com.ingrammicro.imdelivery.tasks.model.Task" />
+        <variable
+            name="viewModel"
+            type="com.ingrammicro.imdelivery.tasks.viewmodel.TaskAllotedViewModel"/>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp8"
+    app:cardCornerRadius="20dp"
+    android:layout_marginStart="@dimen/dp12"
+    android:layout_marginEnd="@dimen/dp12">
+    <LinearLayout
+       android:id="@+id/linearLayoutJobDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_card_view"
+        android:onClick="@{() -> viewModel.onTaskClick()}"
+        android:padding="@dimen/dp12"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/relativelayout_invoice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:id="@+id/text_invoice_no"
+                style="@style/TaskDetailsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_invoice_no"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TaskDataText"
+                android:layout_marginStart="@dimen/dp5"
+                android:text="@{item.invoiceNo}"
+                android:layout_toEndOf="@id/text_invoice_no" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/text_name"
+                style="@style/TaskDetailsText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/text_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TaskDataText"
+                android:text="@{item.customerName}"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/text_delivery_address"
+                style="@style/TaskDetailsText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/text_delivery_address"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TaskDataText"
+                android:text="@{item.deliveryAdd}"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/relativelayout_buttons"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/button_design_task"
+                android:background="@color/call_bg"
+                app:backgroundTint="@color/call_bg"
+                android:id="@+id/text_call"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/ic_phonesolid"
+                android:paddingStart="@dimen/dp8"
+                android:paddingEnd="@dimen/dp8"
+                android:text="@string/action_call"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/view_map_bg"
+                app:backgroundTint="@color/view_map_bg"
+                style="@style/button_design_task"
+                android:id="@+id/text_view"
+                android:drawableLeft="@drawable/ic_locationsolid"
+                android:padding="5dp"
+                android:paddingStart="@dimen/dp8"
+                android:paddingEnd="@dimen/dp8"
+                android:layout_marginLeft="@dimen/dp12"
+                android:layout_toRightOf="@id/text_call"
+                android:text="@string/action_view_map"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

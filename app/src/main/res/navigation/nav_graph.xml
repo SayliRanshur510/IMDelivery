@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login_fragment">
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.ingrammicro.imdelivery.account.fragment.LoginFragment"
+        android:label="RetailerDistributorLogin"
+        tools:layout="@layout/fragment_login">
+    <action
+        android:id="@+id/move_to_forgot_password"
+        app:destination="@id/forgot_password_fragment" />
+        <action
+            android:id="@+id/action_login_to_tasks_details"
+            app:destination="@id/task_list_fragment"
+            app:popUpTo="@id/task_list_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgot_password_fragment"
+        android:name="com.ingrammicro.imdelivery.account.fragment.ForgotPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_forgot_password_to_login"
+            app:destination="@id/login_fragment"
+            app:popUpTo="@id/login_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/task_list_fragment"
+        android:name="com.ingrammicro.imdelivery.tasks.fragment.TaskAllotedFragment"
+        android:label="Task Alloted"
+        tools:layout="@layout/fragment_task_alloted">
+        <action
+            android:id="@+id/action_task_to_job_details"
+            app:destination="@id/job_details_fragment"
+            app:popUpTo="@id/job_details_fragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/job_details_fragment"
+        android:name="com.ingrammicro.imdelivery.tasks.fragment.JobDetailsFragment"
+        android:label="Job Details"
+        tools:layout="@layout/fragment_job_details">
+
+    </fragment>
+</navigation>

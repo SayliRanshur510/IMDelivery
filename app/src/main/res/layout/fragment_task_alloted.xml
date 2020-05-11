@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+   <data>
+
+      <import
+          alias="v"
+          type="android.view.View" />
+
+      <variable
+          name="viewModel"
+          type="com.ingrammicro.imdelivery.tasks.viewmodel.TaskAllotedViewModel" />
+   </data>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activation.fragment.VerifyUpcFragment">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:layout_behavior="@string/appbar_scrolling_view_behavior">
+      <LinearLayout
+          android:id="@+id/layout_search"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal"
+          android:padding="4dp">
+
+         <FrameLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:background="@drawable/search_bar_activation_bg">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                style="@style/search_text"
+                android:layout_height="40dp"
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/search_hint"
+                app:queryBackground="@android:color/transparent"/>
+         </FrameLayout>
+
+         <ImageView
+             android:id="@+id/filter_menu"
+             android:layout_width="36dp"
+             android:layout_height="36dp"
+             android:layout_marginStart="8dp"
+             android:layout_marginEnd="8dp"
+             android:padding="4dp"
+             app:srcCompat="@drawable/ic_filter_list_black_24dp"
+             tools:ignore="VectorDrawableCompat" />
+
+      </LinearLayout>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/layout_search"
+    android:layout_marginTop="@dimen/dp5"
+    tools:context=".tasks.fragment.TaskAllotedFragment">
+
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/task_recyclerView"
+       android:layout_height="match_parent"
+       android:layout_width="match_parent"/>
+
+</FrameLayout>
+
+   </RelativeLayout>
+   <com.google.android.material.appbar.AppBarLayout
+       android:id="@+id/app_bar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:theme="@style/AppTheme.AppBarOverlay">
+
+      <include
+          android:id="@+id/toolbar_main"
+          layout="@layout/toolbar_main"
+          android:elevation="@dimen/design_appbar_elevation" />
+   </com.google.android.material.appbar.AppBarLayout>
+
+
+      <ProgressBar
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:visibility="@{viewModel.isLoading? v.VISIBLE:v.GONE}"
+          android:layout_gravity="center" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

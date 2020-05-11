@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">apps.imonline.in</domain>
+    </domain-config>
+</network-security-config>
+
+<!--<network-security-config>-->
+<!--<debug-overrides>-->
+    <!--<trust-anchors>-->
+        <!--<certificates src="@raw/ingramcoverplus"/>-->
+    <!--</trust-anchors>-->
+<!--</debug-overrides>-->
+<!--</network-security-config>-->
